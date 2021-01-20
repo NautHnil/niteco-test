@@ -1,0 +1,120 @@
+a {
+  @include transition(all .25s ease);
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+// Font size
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $prop, $abbrev in (font-size: fs) {
+      @each $size, $length in $arr-font-size {
+        .#{$abbrev}#{$infix}-#{$size} {
+          #{$prop}: $length !important;
+        }
+      }
+    }
+
+    @each $prop, $abbrev in (border: border) {
+      @each $name, $val in (top: none, right: none, bottom: none, left: none) {
+        .#{$abbrev}#{$infix}-#{$name}-0 {
+          #{$prop}-#{$name}: $val !important;
+        }
+      }
+    }
+  }
+}
+
+// Colors
+@each $color, $value in $niteco-theme-colors {
+  .bg-#{$color},
+  .bg-hover-#{$color}:hover{
+    background-color: $value !important;
+  }
+
+  .text-#{$color},
+  .text-hover-#{$color}:hover {
+    color: $value !important;
+  }
+
+  .border-#{$color} {
+    border-color: $value !important;
+  }
+}
+
+// Line-heights
+@each $color, $value in $arr-line-height {
+  .lh-#{$color} {
+    line-height: $value;
+  }
+}
+
+// Margin & Padding
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $prop, $abbrev in (margin: m, padding: p) {
+      @each $size, $length in $mp {
+        .#{$abbrev}#{$infix}-#{$size} {
+          #{$prop}: $length !important;
+        }
+
+        .#{$abbrev}t#{$infix}-#{$size},
+        .#{$abbrev}y#{$infix}-#{$size} {
+          #{$prop}-top: $length !important;
+        }
+
+        .#{$abbrev}r#{$infix}-#{$size},
+        .#{$abbrev}x#{$infix}-#{$size} {
+          #{$prop}-right: $length !important;
+        }
+
+        .#{$abbrev}b#{$infix}-#{$size},
+        .#{$abbrev}y#{$infix}-#{$size} {
+          #{$prop}-bottom: $length !important;
+        }
+
+        .#{$abbrev}l#{$infix}-#{$size},
+        .#{$abbrev}x#{$infix}-#{$size} {
+          #{$prop}-left: $length !important;
+        }
+      }
+    }
+
+    // Some special margin utils
+    .m#{$infix}-auto {
+      margin: auto !important;
+    }
+
+    .mt#{$infix}-auto,
+    .my#{$infix}-auto {
+      margin-top: auto !important;
+    }
+
+    .mr#{$infix}-auto,
+    .mx#{$infix}-auto {
+      margin-right: auto !important;
+    }
+
+    .mb#{$infix}-auto,
+    .my#{$infix}-auto {
+      margin-bottom: auto !important;
+    }
+
+    .ml#{$infix}-auto,
+    .mx#{$infix}-auto {
+      margin-left: auto !important;
+    }
+  }
+}

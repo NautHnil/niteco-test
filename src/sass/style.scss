@@ -1,0 +1,65 @@
+/*-------------------------------------------------------------------/*
+Template name: NITECO VIET NAM
+Version      : 1.0.0
+Author       : xSpidey
+Last change  : 2021/01/20
+/*-------------------------------------------------------------------
+[Color codes]
+    Background:   #21201E
+    Body Color :  #ffffff
+    Main color:   #FFD300
+
+[Typography]
+    Body:           16px Roboto, sans-serif;
+    Heading:        Poppins, sans-serif;
+    Small Heading:  Playfair Display, serif;
+
+[Table of contents]
+    1. COMMON STYLES
+    2. CONTENT
+        2.1. Common
+    	2.2. Error 404
+-------------------------------------------------------------------*/
+
+// Import variables
+@import "variables";
+
+// Import libraries
+/*
+ * 1. COMMON STYLES
+ * ----------------------------------------------------------------
+ */
+@import "libraries/bootstrap-4.1.3/bootstrap";
+// @import "libraries/bootstrap-4.1.3/bootstrap-grid";
+// @import "libraries/bootstrap-4.1.3/bootstrap-reboot";
+@import "libraries/fontawesome-5.5.0/fontawesome";
+@import "libraries/fontawesome-5.5.0/brands";
+@import "libraries/fontawesome-5.5.0/regular";
+@import "libraries/fontawesome-5.5.0/solid";
+@import "libraries/fontawesome-5.5.0/v4-shims";
+
+// Import mixins
+@import "mixins";
+
+// Base
+@import "base/reset";
+@import "base/buttons";
+
+/*
+ * 2. CONTENT
+ * ----------------------------------------------------------------
+ */
+
+// Layouts
+/* 2.1. Common */
+@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/footer";
+@import "layouts/404";
+
+// Components: Font icons of website
+
+// Components: Shortcode
+@import "components/hero-banner";
+@import "components/products";
+@import "components/utils";

@@ -1,0 +1,33 @@
+.niteco-hero-banner {
+  height: 480px;
+
+  &__item {
+    position: relative;
+  }
+
+  &__content {
+    min-width: 100%;
+    transform: translateY(-50%);
+
+    @include absolute(50%, auto, null, 0);
+    @include media-breakpoint-up(xl) {
+      min-width: 520px;
+      left: -35px;
+    }
+
+    &--right {
+      left: auto;
+      right: 0;
+
+      @include media-breakpoint-up(xl) {
+        right: -35px;
+      }
+    }
+
+    &--center {
+      left: 50%;
+      right: auto;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

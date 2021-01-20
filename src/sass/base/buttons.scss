@@ -1,0 +1,10 @@
+@each $color, $value in $niteco-theme-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+
+  .btn-outline-#{$color} {
+    color: $value !important;
+    @include button-outline-variant($value, $value, lighten($value, 45%), $value);
+  }
+}

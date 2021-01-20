@@ -1,0 +1,34 @@
+{# card.html #}
+<div class="card rounded-0 bg-transparent border-0{{modifyClass}}">
+    <div class="card-header bg-transparent border-0 p-0 mb-20">
+        <h2 class="card-title fs-24 font-weight-light text-uppercase text-center mb-10" data-compare="init" data-compare-element=".card-title">{{ title }}</h2>
+    </div>
+
+    {% if image %}
+    <div class="card-image mb-30 mb-xl-70">
+        <img class="card-img-top" src="{{ image }}" alt="{{ title }}">
+    </div>
+    {% endif %}
+
+    {% if desc %}
+    <div class="mb-15">
+        <div class="card-body font-weight-light p-0" data-compare="init" data-compare-element=".card-body">
+            <p class="card-text">{{ desc }}</p>
+        </div>
+    </div>
+    {% endif %}
+
+    {% if list %}
+    <ul class="list-group list-group-flush font-weight-light border-top p-0 pt-10 mb-20" data-compare="init" data-compare-element=".list-group">
+        {% for item in list %}
+        <li class="list-group-item border-0 bg-transparent px-0">{{ item }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if link %}
+    <div class="mb-30 mb-xl-70">
+        <a href="#" class="btn btn-lg btn-niteco-main text-white rounded-0 fs-18 px-20 w-100">View Product</a>
+    </div>
+    {% endif %}
+</div>

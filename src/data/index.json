@@ -1,0 +1,23 @@
+{
+  "titlePage": "Niteco Viet Nam",
+  "products": [
+    {
+      "image": "assets/images/hob1.png",
+      "title": "Placa de induccion de 36 cm",
+      "desc": "For the ultimate level of flexibility, the zones on this induction hob adapt automatically to your cookware - ensuring even cooking results whatever the pan's size or position",
+      "list": ["MaxiSense Pure Technology", "DirekTouch Controls"]
+    },
+    {
+      "image": "assets/images/hob2.png",
+      "title": "60cm Pure 4 zone induction cooktop",
+      "desc": "Preparing many dishes at the same time or cooking for a dinner party? This hob is made for those occasions when yo need more options, with equally tasty results. It's FlexiBridge feature means you can customize your own cooking area. combining up to 4 segments with a consistent and even heat distribution.",
+      "list": ["Residual Heat Indicator", "Automax Function", "Power Slide"]
+    },
+    {
+      "image": "assets/images/hob3.png",
+      "title": "80cm Freezone induction cooktop",
+      "desc": "Get the very best taste and texture when frying, every single time. To start, just select the food desired result. No more guessing when the pan or oil is at the right temperature. No more heat adjustments. With the SenseFry induction hob, great flavour is guaranteed",
+      "list": ["SendFry"]
+    }
+  ]
+}

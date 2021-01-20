@@ -1,0 +1,22 @@
+.bx-product {
+  &.card {
+    .card-image {
+      position: relative;
+
+      @include rem((
+        margin: 0 30px,
+      ));
+
+      &::before {
+        @include paddingTop(350, 307);
+      }
+    }
+
+    .card-img-top {
+      height: 100%;
+      object-fit: contain;
+
+      @include absolute(0, 0, 0, 0);
+    }
+  }
+}

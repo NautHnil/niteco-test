@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Metric';
+  font-style: normal;
+  font-weight: 400;
+  src: url('#{$metric-font-path}/MetricWeb-Regular.eot');
+  src: url('#{$metric-font-path}/MetricWeb-Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$metric-font-path}/MetricWeb-Regular.woff2') format('woff2'),
+  url('#{$metric-font-path}/MetricWeb-Regular.woff') format('woff'),
+  url('#{$metric-font-path}/MetricWeb-Regular.ttf') format('truetype'),
+  url('#{$metric-font-path}/MetricWeb-Regular.svg#metric') format('svg');
+}
